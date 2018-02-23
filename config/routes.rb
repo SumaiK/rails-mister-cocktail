@@ -6,4 +6,6 @@ end
 
   resources :doses, only: [:destroy]
 
+  root to: 'cocktails#index'
+
 end
