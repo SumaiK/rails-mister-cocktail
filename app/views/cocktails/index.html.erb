@@ -1,3 +1,4 @@
+<%#= image_tag "1429308-drinks-wallpaper.jpg" %>
 <div class="container">
   <div class="row">
     <h1>Cock-tales</h1>
@@ -11,7 +12,7 @@
     <ul>
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="cocktail">
+        <div class="cocktail" style="<%= image_path "vodka.jpg" %>">
           <p class="button"><%= link_to cocktail.name, cocktail %></p>
         </div>
           <input id="checkBox" type="checkbox" name="can make" value="complete">
