@@ -12,7 +12,7 @@
     <ul>
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="cocktail" style="<%= image_path "vodka.jpg" %>">
+        <div class="cocktail" style="background-image: url(<%= image_path "vodka.jpg" %>);">
           <p class="button"><%= link_to cocktail.name, cocktail %></p>
         </div>
           <input id="checkBox" type="checkbox" name="can make" value="complete">
