@@ -1,0 +1,84 @@
+body {
+  background-image: url("1429308-drinks-wallpaper.jpg");
+}
+
+h3 {
+  color: #f7f7ff;
+  text-align: center;
+}
+
+label {
+  color: #f7f7ff;
+}
+
+h1 {
+  color: #f7f7ff;
+  text-align: center;
+}
+
+p {
+  color: #daf7dc;
+}
+
+.button {
+  font-size: 15px;
+  text-align: right;
+  text-decoration: none;
+  color: #daf7dc;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.create-button {
+  text-align: center;
+  // display: inline;
+  // top: 0%;
+  // left: 0%;
+  // width: 10%;
+  padding: 2px;
+}
+
+.cocktail {
+  background-image: url("vodka.jpg");
+  height: 200px;
+  width: 370px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+  border-radius: 3px;
+  position: relative;;
+  border: solid; color: #daf7dc;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s;
+}
+
+.card {
+  background: white;
+  margin-bottom: 10px;
+}
+.card-header {
+  height: 150px;
+  background-size: cover;
+}
+.card-body {
+  padding: 30px;
+}
+
+.btn {
+ box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+ border-radius: 50px;
+ margin-top: 10px
+}
+
+.ingredient {
+  padding-top: 10px;
+  display: block;
+  background-position: center;
+  border: 1px solid #ace4aa;
+  text-align: center;
+}
+
+
