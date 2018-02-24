@@ -1,6 +1,6 @@
 class CocktailsController < ApplicationController
   # this is for all the methods that share this variable @cocktail = Cocktail.find(params[:id])
-  before_action :set_cocktail, only: [:show, :edit]
+  before_action :set_cocktail, only: [:show, :edit,:destroy]
 
   def index
     @cocktails = Cocktail.all
@@ -26,6 +26,15 @@ class CocktailsController < ApplicationController
     end
   end
 
+
+  def destroy
+    @cocktail.destroy
+    respond_to do |format|
+      format.html { redirect_to cocktails_url, notice: 'cocktail was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cocktail
@@ -33,6 +42,6 @@ class CocktailsController < ApplicationController
     end
 
     def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, :photo, :photo_cache)
     end
 end

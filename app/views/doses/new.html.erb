@@ -1,4 +1,4 @@
-<body class= "ingredient">
+<!-- <body class= "ingredient"> -->
   <h1>New Cocktail recipe</h1>
 
   <div class="container">
@@ -7,9 +7,11 @@
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div>
           <%= simple_form_for [@cocktail, @dose] do |f| %>
-            <p><%= f.input :description %></p>
-            <p><%= f.association :ingredient %></p>
-            <p class="create-button"><%= f.submit "create new recipe", class: "btn btn-primary" %></p>
+          <div class="field">
+            <%= f.input :description %>
+            <%= f.association :ingredient %>
+          </div>
+          <p class="create-button"><%= f.submit "create new recipe", class: "btn btn-primary" %></p>
           <% end %>
         <p class="create-button"><%= link_to 'Back to all cocktails', cocktails_path, class: "btn btn-primary" %><p>
         </div>
@@ -17,3 +19,6 @@
     </div>
   </div>
 </body>
+
+
+

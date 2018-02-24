@@ -1,17 +1,27 @@
-<h1><%= @cocktail.name  %></h1>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+<div class="page">
+  <h1><%= @cocktail.name  %></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <div class="card"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2">
+              <%= cl_image_tag @cocktail.photo, height: 334, width: 555, crop: :fill %>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="ingredient">
       <% @cocktail.doses.each do |dose| %>
         <p><%= dose.description %> <%= dose.ingredient.name %>
-        <% link_to 'delete ingredient', dose_path(dose), :method => 'delete' %></p>
         <p><%= link_to 'Delete Ingredient', dose_path(dose), :method => 'delete' %><p>
       <% end %>
       </div>
-      <p class="create-button"><%= link_to 'Create a reciepe', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %><p>
-      <p class="create-button"><%= link_to 'Back to all cocktails', cocktails_path, class: "btn btn-primary" %><p>
+    <div class="create-button"><%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></div>
+    <div class="create-button"><%= link_to 'Back to all cocktails', cocktails_path, class: "btn btn-primary" %></div>
+  </div>
     </div>
   </div>
 </div>
+
+
+'display: block; margin: auto; width: 40%;'

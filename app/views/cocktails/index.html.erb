@@ -1,9 +1,11 @@
-<%#= image_tag "1429308-drinks-wallpaper.jpg" %>
-<div class="container">
-  <div class="row">
-    <h1>Cock-tales</h1>
-    <h3>What's your best Cock-tale?</h3>
-    <p class="create-button"><%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn btn-primary "%></p>
+<div class="banner_2" style="background-image: url(<%= image_path("drinks.jpg",
+      width: 300, height: 300, crop: :thumb) %>)">
+  <div class="banner" style="background-image: url(<%= image_path("1429308-drinks-wallpaper.jpg") %>);">
+    <div class="banner-content">
+      <h1>Cock-tales</h1>
+      <h3>What's your best Cock-tale?</h3>
+      <p class="create-button"><%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn btn-primary "%></p>
+    </div>
   </div>
 </div>
 
@@ -12,11 +14,13 @@
     <ul>
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="cocktail" style="background-image: url(<%= image_path "vodka.jpg" %>);">
+        <div class="cocktail" style="background-image: url(<%= image_path("drinks2.jpg",
+      width: 300, height: 300, crop: :thumb) %>)">
           <p class="button"><%= link_to cocktail.name, cocktail %></p>
         </div>
           <input id="checkBox" type="checkbox" name="can make" value="complete">
           <label for="completed"><p>Tried it</p></label>
+          <%= link_to 'Delete Cocktail', cocktail_path(cocktail), method: :delete %>
       </div>
     <% end %>
     </ul>
