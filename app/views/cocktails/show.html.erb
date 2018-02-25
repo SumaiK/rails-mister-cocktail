@@ -1,24 +1,17 @@
 <div class="page">
   <h1><%= @cocktail.name  %></h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <div class="card">
-            <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-          </div>
-        </div>
-      </div>
-    </div>
-      <div class="ingredient">
+    <div class="ingredient">
       <% @cocktail.doses.each do |dose| %>
         <p><%= dose.description %> <%= dose.ingredient.name %>
         <p><%= link_to 'Delete Ingredient', dose_path(dose), :method => 'delete' %><p>
       <% end %>
-      </div>
+    </div>
     <div class="create-button"><%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
     </div>
     <div class="create-button"><%= link_to 'Back to all cocktails', cocktails_path, class: "btn btn-primary" %>
     </div>
-  </div>
+<div class="photo" style="background-image: url(<%= image_path("EclipseCocktails1.png",
+        width: 300, height: 300) %>)">
+</div>
 </div>
 
